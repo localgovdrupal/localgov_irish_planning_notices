@@ -17,13 +17,9 @@ id: node.localgov_planning_notices_list.teaser
 targetEntityType: node
 bundle: localgov_planning_notices_list
 mode: teaser
-content:
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
+content: {  }
 hidden:
+  links: true
   localgov_pnl_appeals_decisions: true
   localgov_pnl_appeals_received: true
   localgov_pnl_applications_made: true
