@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.localgov_pnl_appeals_decisions
+    - node.type.localgov_planning_notices_list
+  module:
+    - file
+    - filefield_paths
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: 'planning-notices-lists/[node:localgov_pnl_year]-[node:localgov_pnl_week_number]'
+      options:
+        slashes: true
+        pathauto: false
+        transliterate: true
+    file_name:
+      value: 'appeals-decisions.[file:extension]'
+      options:
+        slashes: true
+        pathauto: false
+        transliterate: true
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+id: node.localgov_planning_notices_list.localgov_pnl_appeals_decisions
+field_name: localgov_pnl_appeals_decisions
+entity_type: node
+bundle: localgov_planning_notices_list
+label: 'Appeals Decisions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'doc docx pdf csv xls xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file

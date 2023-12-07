@@ -1,0 +1,84 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_appeals_decisions
+    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_appeals_received
+    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_applications_made
+    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_date
+    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_decisions_made
+    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_week_number
+    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_year
+    - node.type.localgov_localgov_planning_notices_list
+  module:
+    - datetime
+    - file
+    - options
+    - user
+id: node.localgov_localgov_planning_notices_list.default
+targetEntityType: node
+bundle: localgov_localgov_planning_notices_list
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  localgov_pnl_appeals_decisions:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  localgov_pnl_appeals_received:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  localgov_pnl_applications_made:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  localgov_pnl_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  localgov_pnl_decisions_made:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  localgov_pnl_week_number:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  localgov_pnl_year:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+hidden:
+  search_api_excerpt: true

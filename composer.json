@@ -1,0 +1,11 @@
+{
+  "name": "localgovdrupal/localgov_irish_planning_notices",
+  "description": "Creates a content type and list for the weekly planning notices.",
+  "type": "drupal-module",
+  "homepage": "https://github.com/localgovdrupal/localgov_irish_planning_notices",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/filefield_paths": "^1.0@beta"
+  }
+}

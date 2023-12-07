@@ -1,0 +1,7 @@
+name: LocalGov Irish Planning Notices
+type: module
+description: Creates a content type and list for the weekly planning notices.
+package: LocalGov Drupal
+core_version_requirement: ^9 || ^10
+dependencies:
+  - filefield_paths:filefield_paths

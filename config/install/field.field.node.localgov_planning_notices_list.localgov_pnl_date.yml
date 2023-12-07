@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.localgov_pnl_date
+    - node.type.localgov_planning_notices_list
+  module:
+    - datetime
+id: node.localgov_planning_notices_list.localgov_pnl_date
+field_name: localgov_pnl_date
+entity_type: node
+bundle: localgov_planning_notices_list
+label: Date
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: '+1 Tuesday'
+default_value_callback: ''
+settings: {  }
+field_type: datetime

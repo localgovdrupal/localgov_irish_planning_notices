@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Planning Notices List'
+type: localgov_planning_notices_list
+description: 'We use this content type to create our weekly planning notices. Planning notices are automatically added to the planning notices listing page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

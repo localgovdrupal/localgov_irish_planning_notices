@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.localgov_localgov_planning_notices_list
+id: node.localgov_localgov_planning_notices_list.title
+field_name: title
+entity_type: node
+bundle: localgov_localgov_planning_notices_list
+label: 'Year + Week Number'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
