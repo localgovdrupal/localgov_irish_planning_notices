@@ -3,19 +3,19 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_appeals_decisions
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_appeals_received
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_applications_made
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_date
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_decisions_made
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_week_number
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_year
-    - node.type.localgov_localgov_planning_notices_list
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_decisions
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_received
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_applications_made
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_date
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_decisions_made
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_week_number
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_year
+    - node.type.localgov_planning_notices_list
   module:
     - user
-id: node.localgov_localgov_planning_notices_list.teaser
+id: node.localgov_planning_notices_list.teaser
 targetEntityType: node
-bundle: localgov_localgov_planning_notices_list
+bundle: localgov_planning_notices_list
 mode: teaser
 content:
   links:

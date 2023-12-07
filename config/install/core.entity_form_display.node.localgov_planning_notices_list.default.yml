@@ -2,23 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_appeals_decisions
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_appeals_received
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_applications_made
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_date
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_decisions_made
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_week_number
-    - field.field.node.localgov_localgov_planning_notices_list.localgov_pnl_year
-    - node.type.localgov_localgov_planning_notices_list
-    - workflows.workflow.localgov_editorial
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_decisions
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_received
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_applications_made
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_date
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_decisions_made
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_week_number
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_year
+    - node.type.localgov_planning_notices_list
   module:
     - content_moderation
     - datetime
     - file
     - path
-id: node.localgov_localgov_planning_notices_list.default
+id: node.localgov_planning_notices_list.default
 targetEntityType: node
-bundle: localgov_localgov_planning_notices_list
+bundle: localgov_planning_notices_list
 mode: default
 content:
   created:

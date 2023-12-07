@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.localgov_localgov_planning_notices_list
-id: node.localgov_localgov_planning_notices_list.promote
+    - node.type.localgov_planning_notices_list
+id: node.localgov_planning_notices_list.promote
 field_name: promote
 entity_type: node
-bundle: localgov_localgov_planning_notices_list
+bundle: localgov_planning_notices_list
 label: 'Promoted to front page'
 description: ''
 required: false
