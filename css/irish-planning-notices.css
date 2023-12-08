@@ -1,0 +1,73 @@
+.view-planning-notices .view-content {
+  margin-top: var(--spacing);
+}
+
+.view-planning-notices table {
+  border: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .view-planning-notices table {
+    border: var(--border);
+  }
+
+}
+
+.view-planning-notices thead {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .view-planning-notices thead {
+    display: table-header-group;
+  }
+}
+
+.view-planning-notices thead th {
+  background-color: var(--color-grey-lighter);
+  border-bottom: var(--border);
+}
+
+.view-planning-notices table th {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .view-planning-notices table th {
+    display: table-cell;
+    padding: var(--spacing);
+    text-align: center;
+    color: var(--color-black);
+    font-weight: bold;
+  }
+}
+
+.view-planning-notices table tr {
+  display: block;
+  border: var(--border);
+  margin-bottom: var(--spacing);
+}
+@media screen and (min-width: 768px) {
+  .view-planning-notices table tr {
+    display: table-row;
+    border: none;
+  }
+}
+
+.view-planning-notices table td {
+  display: block;
+  padding: var(--spacing);
+  text-align: left;
+  color: var(--color-black);
+}
+@media screen and (min-width: 768px) {
+  .view-planning-notices table td {
+    display: table-cell;
+    padding: var(--spacing);
+    text-align: center;
+    border-bottom: var(--border);
+  }
+}
+
+.view-planning-notices td.views-field-localgov-pnl-week-number {
+  font-weight: bold;
+  background-color: var(--color-grey-lighter);
+}

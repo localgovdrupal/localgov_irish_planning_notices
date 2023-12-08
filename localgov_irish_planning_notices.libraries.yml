@@ -1,0 +1,4 @@
+irish-planning-notices:
+  css:
+    theme:
+      css/irish-planning-notices.css: {}

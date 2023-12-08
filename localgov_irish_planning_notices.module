@@ -1,6 +1,16 @@
 <?php
+use Drupal\views\ViewExecutable;
 
 /**
  * @file
  * Primary module hooks for LocalGov Irish Planning Notices module.
  */
+
+/**
+* Implements hook_views_pre_render().
+*/
+function localgov_irish_planning_notices_views_pre_render(ViewExecutable $view) {
+  if ($view->id() == 'planning_notices') {
+    $view->element['#attached']['library'][] = 'localgov_irish_planning_notices/irish-planning-notices';
+  }
+}
