@@ -1,6 +1,7 @@
 # Irish Planning Notices
 
-Thanks to [Carlow County Council](https://carlow.ie) for funding development of this module.
+ - Thanks to [Carlow County Council](https://carlow.ie) for funding development of this module.
+ - Developed by [Mark Conroy @ Annertech](https://www.annertech.com).
 
 This module creates a content type called "Planning Notice" and a view to list the weekly notices.
 
@@ -18,5 +19,3 @@ The list of planning notices is available at `/planning-notices`, e.g. `https://
 
 ## Responsive Table
 The output of the listing page is a HTML `table`. On small screens we have adapted the CSS for this to resember a card, and on large screens a table.
-
-Developed by [Mark Conroy @ Annertech](https://www.annertech.com).
