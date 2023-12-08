@@ -23,8 +23,8 @@
 }
 
 .view-planning-notices thead th {
-  background-color: var(--color-grey-lighter);
   border-bottom: var(--border);
+  background-color: var(--color-grey-lighter);
 }
 
 .view-planning-notices table th {
@@ -34,16 +34,16 @@
   .view-planning-notices table th {
     display: table-cell;
     padding: var(--spacing);
+    font-weight: bold;
     text-align: center;
     color: var(--color-black);
-    font-weight: bold;
   }
 }
 
 .view-planning-notices table tr {
   display: block;
-  border: var(--border);
   margin-bottom: var(--spacing);
+  border: var(--border);
 }
 @media screen and (min-width: 768px) {
   .view-planning-notices table tr {
@@ -62,8 +62,8 @@
   .view-planning-notices table td {
     display: table-cell;
     padding: var(--spacing);
-    text-align: center;
     border-bottom: var(--border);
+    text-align: center;
   }
 }
 
