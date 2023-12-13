@@ -2,16 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_decisions
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_received
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_applications_made
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_files
     - field.field.node.localgov_planning_notices_list.localgov_pnl_date
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_decisions_made
     - field.field.node.localgov_planning_notices_list.localgov_pnl_week_number
     - field.field.node.localgov_planning_notices_list.localgov_pnl_year
     - node.type.localgov_planning_notices_list
   module:
-    - content_moderation
     - datetime
     - file
     - path
@@ -26,23 +22,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  localgov_pnl_appeals_decisions:
+  localgov_pnl_files:
     type: file_generic
-    weight: 127
-    region: content
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-  localgov_pnl_appeals_received:
-    type: file_generic
-    weight: 126
-    region: content
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-  localgov_pnl_applications_made:
-    type: file_generic
-    weight: 124
+    weight: 128
     region: content
     settings:
       progress_indicator: throbber
@@ -52,13 +34,6 @@ content:
     weight: 123
     region: content
     settings: {  }
-    third_party_settings: {  }
-  localgov_pnl_decisions_made:
-    type: file_generic
-    weight: 125
-    region: content
-    settings:
-      progress_indicator: throbber
     third_party_settings: {  }
   localgov_pnl_week_number:
     type: options_select

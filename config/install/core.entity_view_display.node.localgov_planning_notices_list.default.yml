@@ -2,11 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_decisions
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_received
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_applications_made
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_files
     - field.field.node.localgov_planning_notices_list.localgov_pnl_date
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_decisions_made
     - field.field.node.localgov_planning_notices_list.localgov_pnl_week_number
     - field.field.node.localgov_planning_notices_list.localgov_pnl_year
     - node.type.localgov_planning_notices_list
@@ -20,34 +17,18 @@ targetEntityType: node
 bundle: localgov_planning_notices_list
 mode: default
 content:
+  localgov_pnl_files:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
-    region: content
-  localgov_pnl_appeals_decisions:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 107
-    region: content
-  localgov_pnl_appeals_received:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 106
-    region: content
-  localgov_pnl_applications_made:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 104
     region: content
   localgov_pnl_date:
     type: datetime_default
@@ -57,14 +38,6 @@ content:
       format_type: medium
     third_party_settings: {  }
     weight: 103
-    region: content
-  localgov_pnl_decisions_made:
-    type: file_default
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    weight: 105
     region: content
   localgov_pnl_week_number:
     type: list_default

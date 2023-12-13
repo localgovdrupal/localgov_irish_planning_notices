@@ -63,11 +63,14 @@
     display: table-cell;
     padding: var(--spacing);
     border-bottom: var(--border);
-    text-align: center;
   }
 }
 
 .view-planning-notices td.views-field-localgov-pnl-week-number {
   font-weight: bold;
   background-color: var(--color-grey-lighter);
+}
+
+.view-planning-notices .views-field-localgov-pnl-files > * {
+  display: block;
 }

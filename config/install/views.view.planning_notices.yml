@@ -1,13 +1,9 @@
-uuid: 2eca6a6c-decc-47cc-9858-d9785c10345c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.localgov_pnl_appeals_decisions
-    - field.storage.node.localgov_pnl_appeals_received
-    - field.storage.node.localgov_pnl_applications_made
     - field.storage.node.localgov_pnl_date
-    - field.storage.node.localgov_pnl_decisions_made
+    - field.storage.node.localgov_pnl_files
     - field.storage.node.localgov_pnl_week_number
     - node.type.localgov_planning_notices_list
   module:
@@ -158,15 +154,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        localgov_pnl_applications_made:
-          id: localgov_pnl_applications_made
-          table: node__localgov_pnl_applications_made
-          field: localgov_pnl_applications_made
+        localgov_pnl_files:
+          id: localgov_pnl_files
+          table: node__localgov_pnl_files
+          field: localgov_pnl_files
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Applications Made'
+          label: File(s)
           exclude: false
           alter:
             alter_text: false
@@ -199,70 +195,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: file_default
-          settings:
-            use_description_as_link_text: false
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        localgov_pnl_decisions_made:
-          id: localgov_pnl_decisions_made
-          table: node__localgov_pnl_decisions_made
-          field: localgov_pnl_decisions_made
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Decisions Made'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -282,133 +215,7 @@ display:
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        localgov_pnl_appeals_received:
-          id: localgov_pnl_appeals_received
-          table: node__localgov_pnl_appeals_received
-          field: localgov_pnl_appeals_received
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Appeals Received'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: file_default
-          settings:
-            use_description_as_link_text: true
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        localgov_pnl_appeals_decisions:
-          id: localgov_pnl_appeals_decisions
-          table: node__localgov_pnl_appeals_decisions
-          field: localgov_pnl_appeals_decisions
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Appeals Decisions'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: file_default
-          settings:
-            use_description_as_link_text: true
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
+          separator: ''
           field_api_classes: false
       pager:
         type: none
@@ -434,22 +241,6 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-          granularity: second
         localgov_pnl_week_number_value:
           id: localgov_pnl_week_number_value
           table: node__localgov_pnl_week_number
@@ -551,8 +342,114 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
+        localgov_pnl_week_number_value:
+          id: localgov_pnl_week_number_value
+          table: node__localgov_pnl_week_number
+          field: localgov_pnl_week_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_week_number_value_op
+            label: 'Week Number'
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_week_number_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_pnl_week_number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_user_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
       style:
         type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            localgov_pnl_week_number: localgov_pnl_week_number
+            localgov_pnl_date: localgov_pnl_date
+            localgov_pnl_applications_made: localgov_pnl_applications_made
+            localgov_pnl_decisions_made: localgov_pnl_decisions_made
+            localgov_pnl_appeals_received: localgov_pnl_appeals_received
+            localgov_pnl_appeals_decisions: localgov_pnl_appeals_decisions
+          default: '-1'
+          info:
+            localgov_pnl_week_number:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            localgov_pnl_date:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            localgov_pnl_applications_made:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            localgov_pnl_decisions_made:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            localgov_pnl_appeals_received:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            localgov_pnl_appeals_decisions:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: true
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
       row:
         type: fields
       query:
@@ -577,11 +474,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.localgov_pnl_appeals_decisions'
-        - 'config:field.storage.node.localgov_pnl_appeals_received'
-        - 'config:field.storage.node.localgov_pnl_applications_made'
         - 'config:field.storage.node.localgov_pnl_date'
-        - 'config:field.storage.node.localgov_pnl_decisions_made'
+        - 'config:field.storage.node.localgov_pnl_files'
         - 'config:field.storage.node.localgov_pnl_week_number'
   planning_notices:
     id: planning_notices
@@ -589,6 +483,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      exposed_block: true
       display_extenders: {  }
       path: planning-notices
     cache_metadata:
@@ -600,9 +495,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.localgov_pnl_appeals_decisions'
-        - 'config:field.storage.node.localgov_pnl_appeals_received'
-        - 'config:field.storage.node.localgov_pnl_applications_made'
         - 'config:field.storage.node.localgov_pnl_date'
-        - 'config:field.storage.node.localgov_pnl_decisions_made'
+        - 'config:field.storage.node.localgov_pnl_files'
         - 'config:field.storage.node.localgov_pnl_week_number'

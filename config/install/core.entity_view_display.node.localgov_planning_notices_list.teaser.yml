@@ -3,11 +3,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_decisions
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_appeals_received
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_applications_made
+    - field.field.node.localgov_planning_notices_list.localgov_pnl_files
     - field.field.node.localgov_planning_notices_list.localgov_pnl_date
-    - field.field.node.localgov_planning_notices_list.localgov_pnl_decisions_made
     - field.field.node.localgov_planning_notices_list.localgov_pnl_week_number
     - field.field.node.localgov_planning_notices_list.localgov_pnl_year
     - node.type.localgov_planning_notices_list
@@ -24,11 +21,8 @@ content:
     weight: 100
     region: content
 hidden:
-  localgov_pnl_appeals_decisions: true
-  localgov_pnl_appeals_received: true
-  localgov_pnl_applications_made: true
+  localgov_pnl_files: true
   localgov_pnl_date: true
-  localgov_pnl_decisions_made: true
   localgov_pnl_week_number: true
   localgov_pnl_year: true
   search_api_excerpt: true
