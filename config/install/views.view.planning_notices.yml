@@ -1,4 +1,3 @@
-uuid: 7a4fe644-10b8-4c09-8129-69aba3fc74af
 langcode: en
 status: true
 dependencies:
@@ -13,8 +12,6 @@ dependencies:
     - node
     - options
     - user
-_core:
-  default_config_hash: AgJlPn2oLwXqrDgVsZbZE0gS5msyp2UgNxSSFMCaFwA
 id: planning_notices
 label: 'Planning Notices'
 module: views
