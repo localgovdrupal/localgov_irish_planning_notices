@@ -304,7 +304,7 @@ display:
           plugin_id: list_field
           operator: or
           value:
-            2023: '2023'
+            2025: '2025'
           group: 1
           exposed: true
           expose:
