@@ -1,3 +1,4 @@
+uuid: 7a4fe644-10b8-4c09-8129-69aba3fc74af
 langcode: en
 status: true
 dependencies:
@@ -12,6 +13,8 @@ dependencies:
     - node
     - options
     - user
+_core:
+  default_config_hash: AgJlPn2oLwXqrDgVsZbZE0gS5msyp2UgNxSSFMCaFwA
 id: planning_notices
 label: 'Planning Notices'
 module: views
@@ -239,7 +242,20 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: true
+          content:
+            value: 'There are no planning notices available.'
+            format: wysiwyg
+          tokenize: false
       sorts:
         localgov_pnl_week_number_value:
           id: localgov_pnl_week_number_value
@@ -304,7 +320,7 @@ display:
           plugin_id: list_field
           operator: or
           value:
-            2023: '2023'
+            2025: '2025'
           group: 1
           exposed: true
           expose:
@@ -328,6 +344,7 @@ display:
               localgov_contributor: '0'
               localgov_news_editor: '0'
               localgov_user_manager: '0'
+              localgov_admin: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -486,6 +503,1214 @@ display:
       exposed_block: true
       display_extenders: {  }
       path: planning-notices
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.localgov_pnl_date'
+        - 'config:field.storage.node.localgov_pnl_files'
+        - 'config:field.storage.node.localgov_pnl_week_number'
+  planning_notices_2023:
+    id: planning_notices_2023
+    display_title: 'Page: 2023'
+    display_plugin: page
+    position: 2
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            localgov_planning_notices_list: localgov_planning_notices_list
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        localgov_pnl_year_value:
+          id: localgov_pnl_year_value
+          table: node__localgov_pnl_year
+          field: localgov_pnl_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            2023: '2023'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_year_value_op
+            label: Year
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: pnl_year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        localgov_pnl_week_number_value:
+          id: localgov_pnl_week_number_value
+          table: node__localgov_pnl_week_number
+          field: localgov_pnl_week_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_week_number_value_op
+            label: 'Week Number'
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_week_number_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_pnl_week_number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_user_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
+      path: planning-notices/2023
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.localgov_pnl_date'
+        - 'config:field.storage.node.localgov_pnl_files'
+        - 'config:field.storage.node.localgov_pnl_week_number'
+  planning_notices_2024:
+    id: planning_notices_2024
+    display_title: 'Page: 2024'
+    display_plugin: page
+    position: 3
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            localgov_planning_notices_list: localgov_planning_notices_list
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        localgov_pnl_year_value:
+          id: localgov_pnl_year_value
+          table: node__localgov_pnl_year
+          field: localgov_pnl_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            2024: '2024'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_year_value_op
+            label: Year
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: pnl_year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        localgov_pnl_week_number_value:
+          id: localgov_pnl_week_number_value
+          table: node__localgov_pnl_week_number
+          field: localgov_pnl_week_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_week_number_value_op
+            label: 'Week Number'
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_week_number_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_pnl_week_number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_user_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
+      path: planning-notices/2024
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.localgov_pnl_date'
+        - 'config:field.storage.node.localgov_pnl_files'
+        - 'config:field.storage.node.localgov_pnl_week_number'
+  planning_notices_2025:
+    id: planning_notices_2025
+    display_title: 'Page: 2025'
+    display_plugin: page
+    position: 3
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            localgov_planning_notices_list: localgov_planning_notices_list
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        localgov_pnl_year_value:
+          id: localgov_pnl_year_value
+          table: node__localgov_pnl_year
+          field: localgov_pnl_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            2025: '2025'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_year_value_op
+            label: Year
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: pnl_year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        localgov_pnl_week_number_value:
+          id: localgov_pnl_week_number_value
+          table: node__localgov_pnl_week_number
+          field: localgov_pnl_week_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_week_number_value_op
+            label: 'Week Number'
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_week_number_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_pnl_week_number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_user_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
+      path: planning-notices/2025
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.localgov_pnl_date'
+        - 'config:field.storage.node.localgov_pnl_files'
+        - 'config:field.storage.node.localgov_pnl_week_number'
+  planning_notices_2026:
+    id: planning_notices_2026
+    display_title: 'Page: 2026'
+    display_plugin: page
+    position: 3
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            localgov_planning_notices_list: localgov_planning_notices_list
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        localgov_pnl_year_value:
+          id: localgov_pnl_year_value
+          table: node__localgov_pnl_year
+          field: localgov_pnl_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            2026: '2026'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_year_value_op
+            label: Year
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: pnl_year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        localgov_pnl_week_number_value:
+          id: localgov_pnl_week_number_value
+          table: node__localgov_pnl_week_number
+          field: localgov_pnl_week_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_week_number_value_op
+            label: 'Week Number'
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_week_number_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_pnl_week_number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_user_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
+      path: planning-notices/2026
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.localgov_pnl_date'
+        - 'config:field.storage.node.localgov_pnl_files'
+        - 'config:field.storage.node.localgov_pnl_week_number'
+  planning_notices_2027:
+    id: planning_notices_2027
+    display_title: 'Page: 2027'
+    display_plugin: page
+    position: 3
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            localgov_planning_notices_list: localgov_planning_notices_list
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        localgov_pnl_year_value:
+          id: localgov_pnl_year_value
+          table: node__localgov_pnl_year
+          field: localgov_pnl_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            2027: '2027'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_year_value_op
+            label: Year
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: pnl_year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        localgov_pnl_week_number_value:
+          id: localgov_pnl_week_number_value
+          table: node__localgov_pnl_week_number
+          field: localgov_pnl_week_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_week_number_value_op
+            label: 'Week Number'
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_week_number_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_pnl_week_number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_user_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
+      path: planning-notices/2027
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.localgov_pnl_date'
+        - 'config:field.storage.node.localgov_pnl_files'
+        - 'config:field.storage.node.localgov_pnl_week_number'
+  planning_notices_2028:
+    id: planning_notices_2028
+    display_title: 'Page: 2028'
+    display_plugin: page
+    position: 3
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            localgov_planning_notices_list: localgov_planning_notices_list
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        localgov_pnl_year_value:
+          id: localgov_pnl_year_value
+          table: node__localgov_pnl_year
+          field: localgov_pnl_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            2028: '2028'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_year_value_op
+            label: Year
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: pnl_year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        localgov_pnl_week_number_value:
+          id: localgov_pnl_week_number_value
+          table: node__localgov_pnl_week_number
+          field: localgov_pnl_week_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_week_number_value_op
+            label: 'Week Number'
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_week_number_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_pnl_week_number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_user_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
+      path: planning-notices/2028
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.localgov_pnl_date'
+        - 'config:field.storage.node.localgov_pnl_files'
+        - 'config:field.storage.node.localgov_pnl_week_number'
+  planning_notices_2029:
+    id: planning_notices_2029
+    display_title: 'Page: 2029'
+    display_plugin: page
+    position: 3
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            localgov_planning_notices_list: localgov_planning_notices_list
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        localgov_pnl_year_value:
+          id: localgov_pnl_year_value
+          table: node__localgov_pnl_year
+          field: localgov_pnl_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            2029: '2029'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_year_value_op
+            label: Year
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: pnl_year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        localgov_pnl_week_number_value:
+          id: localgov_pnl_week_number_value
+          table: node__localgov_pnl_week_number
+          field: localgov_pnl_week_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_week_number_value_op
+            label: 'Week Number'
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_week_number_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_pnl_week_number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_user_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
+      path: planning-notices/2029
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.localgov_pnl_date'
+        - 'config:field.storage.node.localgov_pnl_files'
+        - 'config:field.storage.node.localgov_pnl_week_number'
+  planning_notices_2030:
+    id: planning_notices_2030
+    display_title: 'Page: 2030'
+    display_plugin: page
+    position: 3
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            localgov_planning_notices_list: localgov_planning_notices_list
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        localgov_pnl_year_value:
+          id: localgov_pnl_year_value
+          table: node__localgov_pnl_year
+          field: localgov_pnl_year_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            2030: '2030'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_year_value_op
+            label: Year
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_year_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: pnl_year
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              emergency_publisher: '0'
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_news_editor: '0'
+              localgov_user_manager: '0'
+              localgov_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+        localgov_pnl_week_number_value:
+          id: localgov_pnl_week_number_value
+          table: node__localgov_pnl_week_number
+          field: localgov_pnl_week_number_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: localgov_pnl_week_number_value_op
+            label: 'Week Number'
+            description: ''
+            use_operator: false
+            operator: localgov_pnl_week_number_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: localgov_pnl_week_number
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              localgov_editor: '0'
+              localgov_author: '0'
+              localgov_contributor: '0'
+              localgov_user_manager: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders:
+        localgov_page_header_display_extender:
+          lede: ''
+          tokenize: false
+      path: planning-notices/2030
     cache_metadata:
       max-age: -1
       contexts:
